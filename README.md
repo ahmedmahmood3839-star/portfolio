@@ -15,6 +15,8 @@ Built with **Next.js**, **React**, **Tailwind CSS**, and **Framer Motion**.
 - **Location**: Pakistan (Available Worldwide)
 - **Role**: Full-Stack Developer
 - **GitHub**: [@Vantara-Digital](https://github.com/Vantara-Digital)
+- **YouTube**: [@AhmadMehmood-d6j](https://www.youtube.com/@AhmadMehmood-d6j)
+- **Facebook**: [Ahmad Mehmood](https://www.facebook.com/profile.php?id=61587796406931)
 
 ---
 

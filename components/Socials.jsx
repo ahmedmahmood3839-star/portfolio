@@ -1,7 +1,21 @@
 import Link from "next/link";
-import { RiGithubLine } from "react-icons/ri";
+import {
+  RiYoutubeLine,
+  RiFacebookLine,
+  RiGithubLine,
+} from "react-icons/ri";
 
 export const socialData = [
+  {
+    name: "YouTube",
+    link: "https://www.youtube.com/@AhmadMehmood-d6j",
+    Icon: RiYoutubeLine,
+  },
+  {
+    name: "Facebook",
+    link: "https://www.facebook.com/profile.php?id=61587796406931",
+    Icon: RiFacebookLine,
+  },
   {
     name: "Github",
     link: "https://github.com/Vantara-Digital",
