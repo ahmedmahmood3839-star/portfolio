@@ -1,0 +1,57 @@
+{
+  "name": "ahmad-mehmood-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "author": {
+    "name": "Ahmad Mehmood"
+  },
+  "description": "Ahmad Mehmood is a Full-Stack Developer from Pakistan specializing in modern web and mobile applications.",
+  "keywords": [
+    "react",
+    "next",
+    "nextjs",
+    "react-native",
+    "nodejs",
+    "express",
+    "mongodb",
+    "firebase",
+    "javascript",
+    "typescript",
+    "tailwind",
+    "framer-motion",
+    "portfolio",
+    "full-stack"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Vantara-Digital/ahmad-mehmood-portfolio.git"
+  },
+  "homepage": "https://github.com/Vantara-Digital",
+  "scripts": {
+    "dev": "next dev --webpack",
+    "build": "next build --webpack",
+    "start": "next start",
+    "lint": "eslint --ext .js,.jsx components pages"
+  },
+  "dependencies": {
+    "@next/font": "^13.4.4",
+    "framer-motion": "^10.12.16",
+    "next": "16.3.2",
+    "react": "18.2.0",
+    "react-countup": "^6.4.2",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.8.0",
+    "react-tsparticles": "^2.9.3",
+    "swiper": "^12.1.2",
+    "tailwind-scrollbar": "^3.0.4",
+    "tsparticles": "^2.9.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "eslint": "8.41.0",
+    "eslint-config-next": "13.4.3",
+    "postcss": "^8.5.23",
+    "tailwindcss": "^3.3.2"
+  }
+}
