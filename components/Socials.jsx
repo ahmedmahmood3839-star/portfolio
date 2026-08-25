@@ -18,7 +18,7 @@ export const socialData = [
   },
   {
     name: "Github",
-    link: "https://github.com/Vantara-Digital",
+    link: "https://github.com/ahmedmahmood3839-star",
     Icon: RiGithubLine,
   },
 ];

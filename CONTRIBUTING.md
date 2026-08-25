@@ -20,17 +20,17 @@ This project is governed by our [Code of Conduct](CODE_OF_CONDUCT.md). By partic
 ## I Have a Question
 
 If you have questions or want clarification regarding this project:
-- Open an issue on GitHub at [Issues](https://github.com/Vantara-Digital/ahmad-mehmood-portfolio/issues).
+- Open an issue on GitHub at [Issues](https://github.com/ahmedmahmood3839-star/portfolio/issues).
 - Provide context regarding your questions.
 
 ## Reporting Bugs
 
 We use GitHub issues to track bugs and errors. If you run into an issue:
-1. Open an issue at [Issues](https://github.com/Vantara-Digital/ahmad-mehmood-portfolio/issues).
+1. Open an issue at [Issues](https://github.com/ahmedmahmood3839-star/portfolio/issues).
 2. Describe the bug with reproduction steps and your environment (Node version, OS, browser).
 
 ## Suggesting Enhancements
 
-Enhancement suggestions are also tracked as [GitHub issues](https://github.com/Vantara-Digital/ahmad-mehmood-portfolio/issues).
+Enhancement suggestions are also tracked as [GitHub issues](https://github.com/ahmedmahmood3839-star/portfolio/issues).
 - Use a clear and descriptive title.
 - Provide a step-by-step description of the enhancement.

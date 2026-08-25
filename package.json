@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "author": {
-    "name": "Ahmad Mehmood"
+    "name": "Ahmad Mehmood",
+    "email": "ahmedmahmood3839@gmail.com",
+    "url": "https://github.com/ahmedmahmood3839-star"
   },
   "description": "Ahmad Mehmood is a Full-Stack Developer from Pakistan specializing in modern web and mobile applications.",
   "keywords": [
@@ -25,9 +27,9 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Vantara-Digital/ahmad-mehmood-portfolio.git"
+    "url": "https://github.com/ahmedmahmood3839-star/portfolio.git"
   },
-  "homepage": "https://github.com/Vantara-Digital",
+  "homepage": "https://github.com/ahmedmahmood3839-star",
   "scripts": {
     "dev": "next dev --webpack",
     "build": "next build --webpack",

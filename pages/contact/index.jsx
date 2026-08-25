@@ -51,11 +51,18 @@ const Contact = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="text-center text-white/60 text-sm md:text-base max-w-md mx-auto mb-8 leading-relaxed"
+            className="text-center text-white/60 text-sm md:text-base max-w-lg mx-auto mb-8 leading-relaxed"
           >
             Have a project in mind or an idea you&apos;d like to bring to life?
             Let&apos;s talk about how I can help turn it into a modern digital
-            product.
+            product. Reach out via the form below or directly at{" "}
+            <a
+              href="mailto:ahmedmahmood3839@gmail.com"
+              className="text-accent hover:underline font-medium text-white transition-colors"
+            >
+              ahmedmahmood3839@gmail.com
+            </a>
+            .
           </motion.p>
 
           {/* form */}

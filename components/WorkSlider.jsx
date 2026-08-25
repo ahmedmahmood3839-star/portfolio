@@ -13,28 +13,28 @@ export const workSlides = {
     {
       images: [
         {
-          title: "Noor Project",
-          category: "Full-Stack Web App",
+          title: "AI Agent",
+          category: "Autonomous AI System",
           path: "/thumb1.jpg",
-          link: "https://github.com/Vantara-Digital/Noor_Project",
+          link: "https://github.com/ahmedmahmood3839-star/Ai-agent",
         },
         {
-          title: "TwinLink",
-          category: "Real-Time Platform",
+          title: "AI Agent 1",
+          category: "Full-Stack AI Application",
           path: "/thumb2.jpg",
-          link: "https://github.com/Vantara-Digital/TwinLink",
+          link: "https://github.com/ahmedmahmood3839-star/Ai-agent1",
         },
         {
-          title: "Voice Cloning",
-          category: "AI Audio Synthesis",
+          title: "Web Platform",
+          category: "Full-Stack Web App",
           path: "/thumb3.jpg",
-          link: "https://github.com/Vantara-Digital/Voice_cloning",
+          link: null,
         },
         {
-          title: "Video Gen",
-          category: "Generative Media Pipeline",
+          title: "Mobile App",
+          category: "React Native Project",
           path: "/thumb4.jpg",
-          link: "https://github.com/Vantara-Digital/Video_gen",
+          link: null,
         },
       ],
     },
@@ -83,17 +83,27 @@ const WorkSlider = () => {
                     <div className="text-xs sm:text-base font-semibold text-white mb-2 line-clamp-1">
                       {image.title}
                     </div>
-                    <Link
-                      href={image.link}
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      className="inline-flex items-center gap-x-1.5 sm:gap-x-2 text-[10px] sm:text-[12px] tracking-[0.15em] font-semibold bg-white text-primary px-3 py-1 sm:py-1.5 rounded-full hover:bg-accent hover:text-white transition-all duration-300"
-                      aria-label={`View ${image.title} on GitHub`}
-                    >
-                      <BsGithub className="text-xs sm:text-sm" />
-                      <span>VIEW CODE</span>
-                      <BsArrowRight className="text-xs sm:text-sm" />
-                    </Link>
+                    {image.link ? (
+                      <Link
+                        href={image.link}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        className="inline-flex items-center gap-x-1.5 sm:gap-x-2 text-[10px] sm:text-[12px] tracking-[0.15em] font-semibold bg-white text-primary px-3 py-1 sm:py-1.5 rounded-full hover:bg-accent hover:text-white transition-all duration-300"
+                        aria-label={`View ${image.title} on GitHub`}
+                      >
+                        <BsGithub className="text-xs sm:text-sm" />
+                        <span>VIEW CODE</span>
+                        <BsArrowRight className="text-xs sm:text-sm" />
+                      </Link>
+                    ) : (
+                      <span
+                        className="inline-flex items-center gap-x-1.5 sm:gap-x-2 text-[10px] sm:text-[12px] tracking-[0.15em] font-semibold bg-white/70 text-primary px-3 py-1 sm:py-1.5 rounded-full cursor-default"
+                        aria-label={`${image.title} repository in review`}
+                      >
+                        <BsGithub className="text-xs sm:text-sm" />
+                        <span>IN REVIEW</span>
+                      </span>
+                    )}
                   </div>
                 </div>
               </div>

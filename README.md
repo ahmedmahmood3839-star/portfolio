@@ -14,7 +14,8 @@ Built with **Next.js**, **React**, **Tailwind CSS**, and **Framer Motion**.
 
 - **Location**: Pakistan (Available Worldwide)
 - **Role**: Full-Stack Developer
-- **GitHub**: [@Vantara-Digital](https://github.com/Vantara-Digital)
+- **GitHub**: [@ahmedmahmood3839-star](https://github.com/ahmedmahmood3839-star)
+- **Email**: [ahmedmahmood3839@gmail.com](mailto:ahmedmahmood3839@gmail.com)
 - **YouTube**: [@AhmadMehmood-d6j](https://www.youtube.com/@AhmadMehmood-d6j)
 - **Facebook**: [Ahmad Mehmood](https://www.facebook.com/profile.php?id=61587796406931)
 
@@ -40,8 +41,8 @@ Ensure you have **Node.js** (v18 or higher) and **Git** installed on your system
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Vantara-Digital/ahmad-mehmood-portfolio.git
-   cd ahmad-mehmood-portfolio
+   git clone https://github.com/ahmedmahmood3839-star/portfolio.git
+   cd portfolio
    ```
 
 2. Install dependencies:
