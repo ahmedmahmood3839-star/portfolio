@@ -38,14 +38,16 @@ const Contact = () => {
       if (response.ok && data.success) {
         setStatus("success");
         setFeedbackMsg(
-          "Thank you! Your inquiry has been prepared. For immediate response, you can also send it directly via your mail client."
+          "Inquiry validated. Please click below to send directly via your email client to ahmedmahmood3839@gmail.com."
         );
         if (data.mailtoFallback) {
           setMailtoUrl(data.mailtoFallback);
         }
       } else {
         setStatus("error");
-        setFeedbackMsg(data.error || "Something went wrong. Please reach out directly via email.");
+        setFeedbackMsg(
+          data.error || "Validation error. Please reach out directly to ahmedmahmood3839@gmail.com."
+        );
         const fallback = `mailto:ahmedmahmood3839@gmail.com?subject=${encodeURIComponent(
           formData.subject || "Portfolio Contact"
         )}&body=${encodeURIComponent(
@@ -55,7 +57,9 @@ const Contact = () => {
       }
     } catch (err) {
       setStatus("error");
-      setFeedbackMsg("Network error. Please contact Ahmad directly at ahmedmahmood3839@gmail.com.");
+      setFeedbackMsg(
+        "Network connection issue. Please email Ahmad directly at ahmedmahmood3839@gmail.com."
+      );
       const fallback = `mailto:ahmedmahmood3839@gmail.com?subject=${encodeURIComponent(
         formData.subject || "Portfolio Contact"
       )}&body=${encodeURIComponent(
@@ -125,7 +129,7 @@ const Contact = () => {
                   href={mailtoUrl}
                   className="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-xs px-3.5 py-1.5 rounded-lg whitespace-nowrap transition-colors"
                 >
-                  Send via Mail Client
+                  Open in Mail Client
                 </a>
               )}
             </motion.div>
@@ -146,7 +150,7 @@ const Contact = () => {
                   href={mailtoUrl}
                   className="bg-accent hover:bg-accent/80 text-white font-semibold text-xs px-3.5 py-1.5 rounded-lg whitespace-nowrap transition-colors"
                 >
-                  Open in Mail App
+                  Send via Mail Client
                 </a>
               )}
             </motion.div>
@@ -217,11 +221,11 @@ const Contact = () => {
             {/* submit button */}
             <button
               type="submit"
-              className="btn rounded-full border border-white/50 max-w-[200px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent hover:bg-accent group mx-auto xl:mx-0 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="btn rounded-full border border-white/50 max-w-[240px] px-6 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent hover:bg-accent group mx-auto xl:mx-0 disabled:opacity-50 disabled:cursor-not-allowed"
               disabled={status === "loading"}
             >
-              <span className="font-semibold text-xs sm:text-sm text-white">
-                {status === "loading" ? "Validating..." : "Send Message"}
+              <span className="font-semibold text-xs sm:text-sm text-white whitespace-nowrap">
+                {status === "loading" ? "Validating..." : "Prepare & Send Email"}
               </span>
               <BsArrowRight className="ml-2 text-sm transition-transform duration-300 group-hover:translate-x-1" />
             </button>

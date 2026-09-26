@@ -84,7 +84,7 @@ const WorkSlider = () => {
                 <div className="relative rounded-xl overflow-hidden border border-white/10 aspect-[16/10] bg-black/40 group">
                   <Image
                     src={project.image}
-                    alt={project.title}
+                    alt={`${project.title} — Architectural preview illustration`}
                     width={600}
                     height={380}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -92,6 +92,9 @@ const WorkSlider = () => {
                   />
                   <div className="absolute top-3 left-3 bg-black/70 backdrop-blur-md border border-white/15 px-3 py-1 rounded-full text-[10px] sm:text-xs font-semibold text-accent uppercase tracking-wider">
                     {project.category}
+                  </div>
+                  <div className="absolute bottom-2 right-2 bg-black/80 backdrop-blur-md border border-white/10 px-2 py-0.5 rounded text-[9px] text-white/60 tracking-wider uppercase">
+                    Preview Diagram
                   </div>
                 </div>
 
@@ -171,7 +174,7 @@ const WorkSlider = () => {
                   )}
 
                   <span className="text-[11px] text-white/40 italic">
-                    Verified Engineering Project
+                    Architecture Preview • Code Verified
                   </span>
                 </div>
               </div>
