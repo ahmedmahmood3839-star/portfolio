@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { BsArrowRight, BsGithub } from "react-icons/bs";
+import { HiEnvelope } from "react-icons/hi2";
 
 import ParticlesContainer from "../components/ParticlesContainer";
-import ProjectsBtn from "../components/ProjectsBtn";
 import Avatar from "../components/Avatar";
-
 import { fadeIn } from "../variants";
 
 const Home = () => {
@@ -11,50 +12,86 @@ const Home = () => {
     <div className="bg-primary/60 h-full">
       {/* text */}
       <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
-        <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto">
-          {/* title */}
-          <motion.h1
-            variants={fadeIn("down", 0.2)}
+        <div className="text-center flex flex-col justify-center xl:pt-28 xl:text-left h-full container mx-auto px-4 sm:px-6">
+          {/* role badge */}
+          <motion.div
+            variants={fadeIn("down", 0.15)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h1"
+            className="mb-3"
           >
-            Transforming Ideas <br /> Into{" "}
-            <span className="text-accent">Digital Reality</span>
+            <span className="inline-block bg-accent/15 border border-accent/30 text-accent text-xs font-semibold uppercase tracking-widest px-3.5 py-1 rounded-full">
+              Full-Stack &amp; Mobile Developer
+            </span>
+          </motion.div>
+
+          {/* title */}
+          <motion.h1
+            variants={fadeIn("down", 0.25)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="h1 mb-4"
+          >
+            Ahmad <span className="text-accent">Mehmood</span>
           </motion.h1>
 
           {/* subtitle */}
           <motion.p
-            variants={fadeIn("down", 0.3)}
+            variants={fadeIn("down", 0.35)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
+            className="max-w-md xl:max-w-xl mx-auto xl:mx-0 mb-8 text-sm md:text-base text-white/80 leading-relaxed font-light"
           >
-            Full-Stack Developer focused on building modern, scalable, and
-            user-friendly web and mobile applications. I turn ideas into
-            reliable digital products using modern technologies, clean
-            architecture, and thoughtful UI/UX.
+            Building modern web platforms, mobile applications, and practical
+            AI-powered experiences. Specializing in offline-first React Native
+            architectures, full-stack Next.js systems, and clean, reliable code.
           </motion.p>
 
-          {/* btn */}
-          <div className="flex justify-center xl:hidden relative">
-            <ProjectsBtn />
-          </div>
+          {/* clear call-to-actions */}
           <motion.div
-            variants={fadeIn("down", 0.4)}
+            variants={fadeIn("down", 0.45)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="hidden xl:flex"
+            className="flex flex-wrap items-center justify-center xl:justify-start gap-3 sm:gap-4"
           >
-            <ProjectsBtn />
+            {/* View Projects CTA */}
+            <Link
+              href="/work"
+              className="inline-flex items-center gap-x-2 bg-accent hover:bg-accent/85 text-white font-semibold text-xs sm:text-sm px-6 py-3 rounded-full transition-all duration-300 shadow-lg shadow-accent/25 hover:scale-105"
+            >
+              <span>View Projects</span>
+              <BsArrowRight className="text-sm" />
+            </Link>
+
+            {/* GitHub CTA */}
+            <Link
+              href="https://github.com/ahmedmahmood3839-star"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="inline-flex items-center gap-x-2 bg-white/10 hover:bg-white/20 text-white font-semibold text-xs sm:text-sm px-5 py-3 rounded-full border border-white/20 transition-all duration-300 hover:scale-105"
+            >
+              <BsGithub className="text-base" />
+              <span>GitHub</span>
+            </Link>
+
+            {/* Contact CTA */}
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-x-2 bg-white/5 hover:bg-white/15 text-white/90 hover:text-white font-medium text-xs sm:text-sm px-5 py-3 rounded-full border border-white/10 transition-all duration-300"
+            >
+              <HiEnvelope className="text-base text-accent" />
+              <span>Contact</span>
+            </Link>
           </motion.div>
         </div>
       </div>
-      {/* image */}
-      <div className="w-[1280px] h-full absolute right-0 bottom-0">
+
+      {/* image & particle system */}
+      <div className="w-[1280px] h-full absolute right-0 bottom-0 pointer-events-none">
         {/* bg img */}
         <div
           role="img"
@@ -65,7 +102,7 @@ const Home = () => {
         {/* particles */}
         <ParticlesContainer />
 
-        {/* avatar */}
+        {/* avatar / branding badge */}
         <motion.div
           variants={fadeIn("up", 0.5)}
           initial="hidden"

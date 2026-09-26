@@ -19,23 +19,34 @@ const Layout = ({ children }) => {
     >
       {/* metadata */}
       <Head>
-        <title>Ahmad Mehmood | Full-Stack Developer</title>
+        <title>Ahmad Mehmood | Full-Stack &amp; Mobile Developer</title>
         <meta
           name="description"
-          content="Ahmad Mehmood is a Full-Stack Developer from Pakistan specializing in modern web and mobile applications with React, Next.js, React Native, Node.js, MongoDB, Firebase, and modern frontend technologies."
-        />
-        <meta
-          name="keywords"
-          content="Ahmad Mehmood, Full-Stack Developer, Web Developer, React, Next.js, React Native, Node.js, Express, MongoDB, Firebase, Tailwind CSS, Framer Motion, Pakistan"
+          content="Portfolio of Ahmad Mehmood, a Full-Stack and Mobile Developer building modern web applications, React Native experiences and AI-powered tools."
         />
         <meta name="author" content="Ahmad Mehmood" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
         <meta name="theme-color" content="#f13024" />
-        <meta property="og:title" content="Ahmad Mehmood | Full-Stack Developer" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Ahmad Mehmood | Full-Stack &amp; Mobile Developer" />
         <meta
           property="og:description"
-          content="Full-Stack Developer from Pakistan focused on building modern, scalable, and user-friendly web and mobile applications."
+          content="Portfolio of Ahmad Mehmood, a Full-Stack and Mobile Developer building modern web applications, React Native experiences and AI-powered tools."
         />
-        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://github.com/ahmedmahmood3839-star" />
+        <meta property="og:site_name" content="Ahmad Mehmood Portfolio" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Ahmad Mehmood | Full-Stack &amp; Mobile Developer" />
+        <meta
+          name="twitter:description"
+          content="Portfolio of Ahmad Mehmood, a Full-Stack and Mobile Developer building modern web applications, React Native experiences and AI-powered tools."
+        />
+
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <TopLeftImg />

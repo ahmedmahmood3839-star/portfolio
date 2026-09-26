@@ -1,0 +1,85 @@
+<svg width="600" height="380" viewBox="0 0 600 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="pBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A102F" />
+      <stop offset="50%" stop-color="#120A21" />
+      <stop offset="100%" stop-color="#0B0616" />
+    </linearGradient>
+    <linearGradient id="pRedGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F13024" />
+      <stop offset="100%" stop-color="#FF6B5B" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="380" rx="16" fill="url(#pBgGrad)" />
+
+  <!-- Particle / Star Accents -->
+  <g opacity="0.3" fill="#FFFFFF">
+    <circle cx="80" cy="70" r="1.5" />
+    <circle cx="180" cy="140" r="2" />
+    <circle cx="280" cy="60" r="1" />
+    <circle cx="420" cy="110" r="2" />
+    <circle cx="520" cy="80" r="1.5" />
+    <circle cx="90" cy="220" r="1.5" />
+    <circle cx="490" cy="240" r="2" />
+  </g>
+
+  <!-- Top Navigation & Brand Header -->
+  <rect x="24" y="24" width="552" height="48" rx="10" fill="#180F2A" stroke="#2D1C4D" stroke-width="1" />
+  <circle cx="48" cy="48" r="8" fill="#F13024" />
+  <text x="68" y="53" fill="#FFFFFF" font-family="'Sora', sans-serif" font-size="14" font-weight="700">ahmad <tspan font-weight="300">mehmood</tspan><tspan fill="#F13024">.</tspan></text>
+  <rect x="420" y="34" width="140" height="28" rx="14" fill="#F13024" />
+  <text x="490" y="52" fill="#FFFFFF" font-family="'Sora', sans-serif" font-size="11" font-weight="600" text-anchor="middle">NEXT.JS + FRAMER</text>
+
+  <!-- Main Hero Card -->
+  <rect x="24" y="86" width="340" height="170" rx="12" fill="#1A112C" stroke="#37225D" stroke-width="1" />
+  <text x="44" y="116" fill="#F13024" font-family="'Sora', sans-serif" font-size="12" font-weight="600">FULL-STACK &amp; MOBILE DEVELOPER</text>
+  <text x="44" y="152" fill="#FFFFFF" font-family="'Sora', sans-serif" font-size="24" font-weight="700">Developer Portfolio</text>
+  <text x="44" y="180" fill="#A5B4FC" font-family="'Sora', sans-serif" font-size="12" font-weight="400">Transforming ideas into fast, modern, and verified digital products.</text>
+
+  <!-- Tech tags inside hero -->
+  <g transform="translate(44, 206)">
+    <rect x="0" y="0" width="70" height="24" rx="6" fill="#2E1B4E" />
+    <text x="35" y="16" fill="#E0E7FF" font-family="'Sora', sans-serif" font-size="10" font-weight="500" text-anchor="middle">Next.js</text>
+
+    <rect x="78" y="0" width="76" height="24" rx="6" fill="#2E1B4E" />
+    <text x="116" y="16" fill="#E0E7FF" font-family="'Sora', sans-serif" font-size="10" font-weight="500" text-anchor="middle">Tailwind</text>
+
+    <rect x="162" y="0" width="112" height="24" rx="6" fill="#2E1B4E" />
+    <text x="218" y="16" fill="#E0E7FF" font-family="'Sora', sans-serif" font-size="10" font-weight="500" text-anchor="middle">Framer Motion</text>
+  </g>
+
+  <!-- Side UI: Interactive Architecture Card -->
+  <rect x="380" y="86" width="196" height="170" rx="12" fill="#140D24" stroke="#2D1C4D" stroke-width="1" />
+  <text x="478" y="114" fill="#C4B5FD" font-family="'Sora', sans-serif" font-size="11" font-weight="600" text-anchor="middle">ENGINEERING STACK</text>
+
+  <rect x="396" y="128" width="164" height="26" rx="6" fill="#22133D" />
+  <text x="478" y="145" fill="#FFFFFF" font-family="'Sora', sans-serif" font-size="10" font-weight="600" text-anchor="middle">Pages Router Architecture</text>
+
+  <rect x="396" y="160" width="164" height="26" rx="6" fill="#22133D" />
+  <text x="478" y="177" fill="#FFFFFF" font-family="'Sora', sans-serif" font-size="10" font-weight="600" text-anchor="middle">tsParticles Dynamic Engine</text>
+
+  <rect x="396" y="192" width="164" height="26" rx="6" fill="#22133D" />
+  <text x="478" y="209" fill="#FFFFFF" font-family="'Sora', sans-serif" font-size="10" font-weight="600" text-anchor="middle">Responsive 360px - 1440px</text>
+
+  <text x="478" y="240" fill="#F13024" font-family="'Sora', sans-serif" font-size="10" font-weight="600" text-anchor="middle">100% Production Ready</text>
+
+  <!-- Bottom Showcase Pillars -->
+  <g transform="translate(24, 272)">
+    <rect x="0" y="0" width="176" height="76" rx="8" fill="#180F2A" stroke="#2D1C4D" stroke-width="1" />
+    <text x="88" y="26" fill="#F13024" font-family="'Sora', sans-serif" font-size="11" font-weight="600" text-anchor="middle">PERFORMANCE</text>
+    <text x="88" y="46" fill="#FFFFFF" font-family="'Sora', sans-serif" font-size="13" font-weight="700" text-anchor="middle">Optimized Core Web</text>
+    <text x="88" y="62" fill="#94A3B8" font-family="'Sora', sans-serif" font-size="9" text-anchor="middle">Clean lightweight assets</text>
+
+    <rect x="188" y="0" width="176" height="76" rx="8" fill="#180F2A" stroke="#2D1C4D" stroke-width="1" />
+    <text x="276" y="26" fill="#F13024" font-family="'Sora', sans-serif" font-size="11" font-weight="600" text-anchor="middle">ACCESSIBILITY</text>
+    <text x="276" y="46" fill="#FFFFFF" font-family="'Sora', sans-serif" font-size="13" font-weight="700" text-anchor="middle">Semantic HTML5</text>
+    <text x="276" y="62" fill="#94A3B8" font-family="'Sora', sans-serif" font-size="9" text-anchor="middle">Screen reader &amp; focus safe</text>
+
+    <rect x="376" y="0" width="176" height="76" rx="8" fill="#180F2A" stroke="#2D1C4D" stroke-width="1" />
+    <text x="464" y="26" fill="#F13024" font-family="'Sora', sans-serif" font-size="11" font-weight="600" text-anchor="middle">ZERO DEMO CODE</text>
+    <text x="464" y="46" fill="#FFFFFF" font-family="'Sora', sans-serif" font-size="13" font-weight="700" text-anchor="middle">Real Case Studies</text>
+    <text x="464" y="62" fill="#94A3B8" font-family="'Sora', sans-serif" font-size="9" text-anchor="middle">Authentic GitHub repos</text>
+  </g>
+</svg>

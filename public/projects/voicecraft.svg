@@ -1,0 +1,125 @@
+<svg width="600" height="380" viewBox="0 0 600 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="vcBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E112A" />
+      <stop offset="50%" stop-color="#140E24" />
+      <stop offset="100%" stop-color="#0B0816" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#9333EA" />
+      <stop offset="100%" stop-color="#C084FC" />
+    </linearGradient>
+    <linearGradient id="voiceWaveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EC4899" />
+      <stop offset="50%" stop-color="#A855F7" />
+      <stop offset="100%" stop-color="#6366F1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="380" rx="16" fill="url(#vcBgGrad)" />
+
+  <!-- Grid Glow Lines -->
+  <g opacity="0.1" stroke="#A855F7" stroke-width="1">
+    <line x1="0" y1="95" x2="600" y2="95" />
+    <line x1="0" y1="190" x2="600" y2="190" />
+    <line x1="0" y1="285" x2="600" y2="285" />
+    <line x1="150" y1="0" x2="150" y2="380" />
+    <line x1="300" y1="0" x2="300" y2="380" />
+    <line x1="450" y1="0" x2="450" y2="380" />
+  </g>
+
+  <!-- Top Navigation & Status -->
+  <rect x="24" y="24" width="552" height="48" rx="10" fill="#1C142E" stroke="#3B265E" stroke-width="1" />
+  <circle cx="48" cy="48" r="8" fill="#A855F7" />
+  <text x="68" y="53" fill="#F3E8FF" font-family="'Sora', sans-serif" font-size="14" font-weight="600">VoiceCraft — AI Text-to-Speech Platform</text>
+  <rect x="426" y="34" width="134" height="28" rx="14" fill="#6B21A8" />
+  <text x="493" y="52" fill="#FAF5FF" font-family="'Sora', sans-serif" font-size="11" font-weight="600" text-anchor="middle">NEXT.js 14 + ANDROID</text>
+
+  <!-- Left: Multi-Provider TTS Dispatcher Console -->
+  <rect x="24" y="86" width="350" height="170" rx="12" fill="#18102A" stroke="#4C1D95" stroke-width="1" />
+  <text x="44" y="114" fill="#C084FC" font-family="'Sora', sans-serif" font-size="11" font-weight="600">MULTI-PROVIDER SYNTHESIS ENGINE</text>
+  <text x="44" y="146" fill="#FFFFFF" font-family="'Sora', sans-serif" font-size="20" font-weight="700">Neural Speech Synthesis</text>
+  
+  <!-- Audio Waveform Visualization -->
+  <g transform="translate(44, 160)">
+    <rect x="0" y="16" width="4" height="18" rx="2" fill="url(#voiceWaveGrad)" />
+    <rect x="8" y="8" width="4" height="34" rx="2" fill="url(#voiceWaveGrad)" />
+    <rect x="16" y="2" width="4" height="46" rx="2" fill="url(#voiceWaveGrad)" />
+    <rect x="24" y="12" width="4" height="26" rx="2" fill="url(#voiceWaveGrad)" />
+    <rect x="32" y="4" width="4" height="42" rx="2" fill="url(#voiceWaveGrad)" />
+    <rect x="40" y="18" width="4" height="14" rx="2" fill="url(#voiceWaveGrad)" />
+    <rect x="48" y="0" width="4" height="50" rx="2" fill="url(#voiceWaveGrad)" />
+    <rect x="56" y="10" width="4" height="30" rx="2" fill="url(#voiceWaveGrad)" />
+    <rect x="64" y="6" width="4" height="38" rx="2" fill="url(#voiceWaveGrad)" />
+    <rect x="72" y="14" width="4" height="22" rx="2" fill="url(#voiceWaveGrad)" />
+    <rect x="80" y="2" width="4" height="46" rx="2" fill="url(#voiceWaveGrad)" />
+    <rect x="88" y="8" width="4" height="34" rx="2" fill="url(#voiceWaveGrad)" />
+    <rect x="96" y="16" width="4" height="18" rx="2" fill="url(#voiceWaveGrad)" />
+    <rect x="104" y="4" width="4" height="42" rx="2" fill="url(#voiceWaveGrad)" />
+    <rect x="112" y="12" width="4" height="26" rx="2" fill="url(#voiceWaveGrad)" />
+    <rect x="120" y="0" width="4" height="50" rx="2" fill="url(#voiceWaveGrad)" />
+    <rect x="128" y="14" width="4" height="22" rx="2" fill="url(#voiceWaveGrad)" />
+    <rect x="136" y="6" width="4" height="38" rx="2" fill="url(#voiceWaveGrad)" />
+    <rect x="144" y="10" width="4" height="30" rx="2" fill="url(#voiceWaveGrad)" />
+    <rect x="152" y="18" width="4" height="14" rx="2" fill="url(#voiceWaveGrad)" />
+    <rect x="160" y="4" width="4" height="42" rx="2" fill="url(#voiceWaveGrad)" />
+    <rect x="168" y="2" width="4" height="46" rx="2" fill="url(#voiceWaveGrad)" />
+    <rect x="176" y="8" width="4" height="34" rx="2" fill="url(#voiceWaveGrad)" />
+    <rect x="184" y="16" width="4" height="18" rx="2" fill="url(#voiceWaveGrad)" />
+  </g>
+
+  <!-- Provider Badges -->
+  <g transform="translate(44, 224)">
+    <rect x="0" y="0" width="86" height="22" rx="5" fill="#3B0764" stroke="#7E22CE" stroke-width="1" />
+    <text x="43" y="15" fill="#E9D5FF" font-family="'Sora', sans-serif" font-size="10" font-weight="600" text-anchor="middle">ElevenLabs</text>
+
+    <rect x="94" y="0" width="94" height="22" rx="5" fill="#3B0764" stroke="#7E22CE" stroke-width="1" />
+    <text x="141" y="15" fill="#E9D5FF" font-family="'Sora', sans-serif" font-size="10" font-weight="600" text-anchor="middle">Hugging Face</text>
+
+    <rect x="196" y="0" width="102" height="22" rx="5" fill="#3B0764" stroke="#7E22CE" stroke-width="1" />
+    <text x="247" y="15" fill="#E9D5FF" font-family="'Sora', sans-serif" font-size="10" font-weight="600" text-anchor="middle">Failover Queue</text>
+  </g>
+
+  <!-- Right: Architecture Stack (Supabase + Prisma + AdMob SSV) -->
+  <rect x="390" y="86" width="186" height="170" rx="12" fill="#1C142E" stroke="#4C1D95" stroke-width="1" />
+  <text x="483" y="112" fill="#D8B4FE" font-family="'Sora', sans-serif" font-size="11" font-weight="600" text-anchor="middle">INFRASTRUCTURE</text>
+
+  <rect x="406" y="126" width="154" height="28" rx="6" fill="#2E1065" />
+  <text x="483" y="145" fill="#F5D0FE" font-family="'Sora', sans-serif" font-size="11" font-weight="600" text-anchor="middle">Supabase PostgreSQL</text>
+
+  <rect x="406" y="162" width="154" height="28" rx="6" fill="#2E1065" />
+  <text x="483" y="181" fill="#F5D0FE" font-family="'Sora', sans-serif" font-size="11" font-weight="600" text-anchor="middle">Prisma ORM Models</text>
+
+  <rect x="406" y="198" width="154" height="28" rx="6" fill="#2E1065" stroke="#9333EA" stroke-width="1" />
+  <text x="483" y="217" fill="#FDE047" font-family="'Sora', sans-serif" font-size="10" font-weight="700" text-anchor="middle">AdMob SSV Verification</text>
+
+  <text x="483" y="244" fill="#C084FC" font-family="'Sora', sans-serif" font-size="10" text-anchor="middle">ECDSA Cryptographic Key</text>
+
+  <!-- Bottom Badges: Architecture Features -->
+  <g transform="translate(24, 272)">
+    <!-- Feature 1 -->
+    <rect x="0" y="0" width="130" height="76" rx="8" fill="#170F26" stroke="#3B1C56" stroke-width="1" />
+    <text x="65" y="26" fill="#C084FC" font-family="'Sora', sans-serif" font-size="11" font-weight="600" text-anchor="middle">CREDIT ENGINE</text>
+    <text x="65" y="46" fill="#FFFFFF" font-family="'Sora', sans-serif" font-size="13" font-weight="700" text-anchor="middle">Atomic Balance</text>
+    <text x="65" y="62" fill="#A855F7" font-family="'Sora', sans-serif" font-size="9" text-anchor="middle">Auto-refund on fail</text>
+
+    <!-- Feature 2 -->
+    <rect x="140" y="0" width="130" height="76" rx="8" fill="#170F26" stroke="#3B1C56" stroke-width="1" />
+    <text x="205" y="26" fill="#C084FC" font-family="'Sora', sans-serif" font-size="11" font-weight="600" text-anchor="middle">API ROUTES</text>
+    <text x="205" y="46" fill="#FFFFFF" font-family="'Sora', sans-serif" font-size="13" font-weight="700" text-anchor="middle">App Router /api</text>
+    <text x="205" y="62" fill="#A855F7" font-family="'Sora', sans-serif" font-size="9" text-anchor="middle">Rate-limited &amp; secure</text>
+
+    <!-- Feature 3 -->
+    <rect x="280" y="0" width="130" height="76" rx="8" fill="#170F26" stroke="#3B1C56" stroke-width="1" />
+    <text x="345" y="26" fill="#C084FC" font-family="'Sora', sans-serif" font-size="11" font-weight="600" text-anchor="middle">VOICE DESIGN</text>
+    <text x="345" y="46" fill="#FFFFFF" font-family="'Sora', sans-serif" font-size="13" font-weight="700" text-anchor="middle">Custom Library</text>
+    <text x="345" y="62" fill="#A855F7" font-family="'Sora', sans-serif" font-size="9" text-anchor="middle">Remix &amp; Clone routes</text>
+
+    <!-- Feature 4 -->
+    <rect x="420" y="0" width="132" height="76" rx="8" fill="#2E1065" stroke="#9333EA" stroke-width="1.5" />
+    <text x="486" y="26" fill="#FDE047" font-family="'Sora', sans-serif" font-size="11" font-weight="700" text-anchor="middle">CAPACITOR APK</text>
+    <text x="486" y="46" fill="#FFFFFF" font-family="'Sora', sans-serif" font-size="13" font-weight="700" text-anchor="middle">Android Native</text>
+    <text x="486" y="62" fill="#E9D5FF" font-family="'Sora', sans-serif" font-size="9" text-anchor="middle">Standalone APK package</text>
+  </g>
+</svg>

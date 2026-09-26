@@ -1,69 +1,156 @@
 import { motion } from "framer-motion";
-import { BsArrowRight } from "react-icons/bs";
+import { useState } from "react";
+import { BsArrowRight, BsCheckCircleFill, BsExclamationTriangleFill, BsGithub } from "react-icons/bs";
+import { HiEnvelope } from "react-icons/hi2";
 
 import { fadeIn } from "../../variants";
-import { useState } from "react";
 
 const Contact = () => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const [status, setStatus] = useState("idle"); // idle | loading | success | error
+  const [feedbackMsg, setFeedbackMsg] = useState("");
+  const [mailtoUrl, setMailtoUrl] = useState("");
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    setIsLoading(true);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
-    const myForm = event.target;
-    const formData = new FormData(myForm);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("loading");
+    setFeedbackMsg("");
 
-    fetch("/__forms.html", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
-    })
-      .then((res) => {
-        if (res.status === 200) {
-          alert("Thank you. I will get back to you as soon as possible.");
-        } else {
-          console.log(res);
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        setStatus("success");
+        setFeedbackMsg(
+          "Thank you! Your inquiry has been prepared. For immediate response, you can also send it directly via your mail client."
+        );
+        if (data.mailtoFallback) {
+          setMailtoUrl(data.mailtoFallback);
         }
-      })
-      .catch((error) => console.log(error))
-      .finally(() => setIsLoading(false));
+      } else {
+        setStatus("error");
+        setFeedbackMsg(data.error || "Something went wrong. Please reach out directly via email.");
+        const fallback = `mailto:ahmedmahmood3839@gmail.com?subject=${encodeURIComponent(
+          formData.subject || "Portfolio Contact"
+        )}&body=${encodeURIComponent(
+          `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
+        )}`;
+        setMailtoUrl(fallback);
+      }
+    } catch (err) {
+      setStatus("error");
+      setFeedbackMsg("Network error. Please contact Ahmad directly at ahmedmahmood3839@gmail.com.");
+      const fallback = `mailto:ahmedmahmood3839@gmail.com?subject=${encodeURIComponent(
+        formData.subject || "Portfolio Contact"
+      )}&body=${encodeURIComponent(
+        `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
+      )}`;
+      setMailtoUrl(fallback);
+    }
   };
 
   return (
-    <div className="h-full bg-primary/30">
-      <div className="container mx-auto py-32 text-center xl:text-left flex items-center justify-center h-full">
-        {/* text & form */}
+    <div className="min-h-full bg-primary/30 py-28 md:py-36 flex items-center overflow-y-auto">
+      <div className="container mx-auto px-4 sm:px-6 text-center xl:text-left flex items-center justify-center h-full">
+        {/* text & form container */}
         <div className="flex flex-col w-full max-w-[700px]">
-          {/* text */}
-          <motion.h2
+          {/* heading */}
+          <motion.div
             variants={fadeIn("up", 0.2)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h2 text-center mb-4"
+            className="text-center mb-6"
           >
-            Let&apos;s <span className="text-accent">connect.</span>
-          </motion.h2>
+            <span className="inline-block bg-accent/15 border border-accent/30 text-accent text-xs font-semibold uppercase tracking-widest px-3.5 py-1 rounded-full mb-3">
+              Get in Touch
+            </span>
+            <h2 className="h2 mb-2">
+              Let&apos;s <span className="text-accent">connect.</span>
+            </h2>
+            <p className="text-white/70 text-xs sm:text-sm md:text-base max-w-lg mx-auto leading-relaxed">
+              Have a mobile app, web application, or technical project in mind? Reach out directly or send a message below.
+            </p>
 
-          <motion.p
-            variants={fadeIn("up", 0.3)}
-            initial="hidden"
-            animate="show"
-            exit="hidden"
-            className="text-center text-white/60 text-sm md:text-base max-w-lg mx-auto mb-8 leading-relaxed"
-          >
-            Have a project in mind or an idea you&apos;d like to bring to life?
-            Let&apos;s talk about how I can help turn it into a modern digital
-            product. Reach out via the form below or directly at{" "}
-            <a
-              href="mailto:ahmedmahmood3839@gmail.com"
-              className="text-accent hover:underline font-medium text-white transition-colors"
+            {/* Quick Contact Badges */}
+            <div className="flex flex-wrap items-center justify-center gap-3 mt-4">
+              <a
+                href="mailto:ahmedmahmood3839@gmail.com"
+                className="inline-flex items-center gap-x-2 bg-white/10 hover:bg-accent text-white text-xs font-medium px-4 py-1.5 rounded-full border border-white/15 transition-all duration-300"
+              >
+                <HiEnvelope className="text-sm text-accent" />
+                <span>ahmedmahmood3839@gmail.com</span>
+              </a>
+              <a
+                href="https://github.com/ahmedmahmood3839-star"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="inline-flex items-center gap-x-2 bg-white/10 hover:bg-white/20 text-white text-xs font-medium px-4 py-1.5 rounded-full border border-white/15 transition-all duration-300"
+              >
+                <BsGithub className="text-sm" />
+                <span>@ahmedmahmood3839-star</span>
+              </a>
+            </div>
+          </motion.div>
+
+          {/* status notification */}
+          {status === "success" && (
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="mb-6 p-4 rounded-xl bg-emerald-500/15 border border-emerald-500/40 text-emerald-200 text-xs sm:text-sm text-left flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3"
             >
-              ahmedmahmood3839@gmail.com
-            </a>
-            .
-          </motion.p>
+              <div className="flex items-center gap-x-2.5">
+                <BsCheckCircleFill className="text-emerald-400 text-lg flex-shrink-0" />
+                <span>{feedbackMsg}</span>
+              </div>
+              {mailtoUrl && (
+                <a
+                  href={mailtoUrl}
+                  className="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-xs px-3.5 py-1.5 rounded-lg whitespace-nowrap transition-colors"
+                >
+                  Send via Mail Client
+                </a>
+              )}
+            </motion.div>
+          )}
+
+          {status === "error" && (
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="mb-6 p-4 rounded-xl bg-red-500/15 border border-red-500/40 text-red-200 text-xs sm:text-sm text-left flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3"
+            >
+              <div className="flex items-center gap-x-2.5">
+                <BsExclamationTriangleFill className="text-red-400 text-lg flex-shrink-0" />
+                <span>{feedbackMsg}</span>
+              </div>
+              {mailtoUrl && (
+                <a
+                  href={mailtoUrl}
+                  className="bg-accent hover:bg-accent/80 text-white font-semibold text-xs px-3.5 py-1.5 rounded-lg whitespace-nowrap transition-colors"
+                >
+                  Open in Mail App
+                </a>
+              )}
+            </motion.div>
+          )}
 
           {/* form */}
           <motion.form
@@ -71,70 +158,72 @@ const Contact = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="flex-1 flex flex-col gap-6 w-full mx-auto"
+            className="flex-1 flex flex-col gap-4 sm:gap-6 w-full mx-auto"
             onSubmit={handleSubmit}
             autoComplete="off"
-            autoCapitalize="off"
-            name="contact"
+            noValidate
           >
-            {/* input group */}
-            <div className="flex flex-col sm:flex-row gap-6 w-full">
-              <input type="hidden" name="form-name" value="contact" />
-
+            {/* input group: name & email */}
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full">
               <input
                 type="text"
                 name="name"
-                placeholder="Name"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="Your Name"
                 className="input"
-                disabled={isLoading}
-                aria-disabled={isLoading}
+                disabled={status === "loading"}
                 required
                 aria-label="Your Name"
               />
               <input
                 type="email"
                 name="email"
-                placeholder="E-mail"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Your Email"
                 className="input"
-                disabled={isLoading}
-                aria-disabled={isLoading}
+                disabled={status === "loading"}
                 required
                 aria-label="Your Email"
               />
             </div>
+
+            {/* subject */}
             <input
               type="text"
               name="subject"
-              placeholder="Subject"
+              value={formData.subject}
+              onChange={handleChange}
+              placeholder="Subject (e.g. Mobile App Development, Consulting)"
               className="input"
-              disabled={isLoading}
-              aria-disabled={isLoading}
+              disabled={status === "loading"}
               required
               aria-label="Subject"
             />
+
+            {/* message */}
             <textarea
               name="message"
-              placeholder="Message..."
-              className="textarea"
-              disabled={isLoading}
-              aria-disabled={isLoading}
+              value={formData.message}
+              onChange={handleChange}
+              placeholder="Describe your project, timeline, or inquiry..."
+              className="textarea h-36"
+              disabled={status === "loading"}
               required
               aria-label="Message"
             />
+
+            {/* submit button */}
             <button
               type="submit"
-              className="btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group mx-auto xl:mx-0"
-              disabled={isLoading}
-              aria-disabled={isLoading}
+              className="btn rounded-full border border-white/50 max-w-[200px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent hover:bg-accent group mx-auto xl:mx-0 disabled:opacity-50 disabled:cursor-not-allowed"
+              disabled={status === "loading"}
             >
-              <span className="group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500 font-medium">
-                Let&apos;s talk
+              <span className="font-semibold text-xs sm:text-sm text-white">
+                {status === "loading" ? "Validating..." : "Send Message"}
               </span>
-
-              <BsArrowRight
-                className="-translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[22px]"
-                aria-hidden
-              />
+              <BsArrowRight className="ml-2 text-sm transition-transform duration-300 group-hover:translate-x-1" />
             </button>
           </motion.form>
         </div>

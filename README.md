@@ -1,19 +1,23 @@
 <a name="readme-top"></a>
 
-# Ahmad Mehmood — Full-Stack Developer Portfolio
+# Ahmad Mehmood — Full-Stack & Mobile Developer Portfolio
 
-Welcome to the personal portfolio of **Ahmad Mehmood**, a Full-Stack Developer from Pakistan specializing in modern web and mobile applications.
+[![Next.js](https://img.shields.io/badge/Next.js-16.3.2-black?style=flat&logo=next.js)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-18.2.0-blue?style=flat&logo=react)](https://react.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.3.2-38B2AC?style=flat&logo=tailwind-css)](https://tailwindcss.com/)
+[![Framer Motion](https://img.shields.io/badge/Framer_Motion-10.12-ff69b4?style=flat&logo=framer)](https://www.framer.com/motion/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-Built with **Next.js**, **React**, **Tailwind CSS**, and **Framer Motion**.
+Personal developer portfolio of **Ahmad Mehmood**, showcasing verified full-stack web and cross-platform mobile engineering projects with clean architecture, offline-first reliability, and thoughtful UI/UX.
 
 ---
 
-## 👨‍💻 About Me
+## 👨‍💻 About Ahmad Mehmood
 
-> *"I’m Ahmad Mehmood, a Full-Stack Developer from Pakistan who enjoys turning ideas into fast, modern, and meaningful digital experiences. I build web and mobile applications with a focus on clean code, intuitive interfaces, and practical solutions."*
+> *"I’m Ahmad Mehmood, a Full-Stack and Mobile Developer from Pakistan. I build modern web applications and mobile experiences with a focus on clean code, offline-first architectures, type safety, and real-world utility."*
 
-- **Location**: Pakistan (Available Worldwide)
-- **Role**: Full-Stack Developer
+- **Role**: Full-Stack & Mobile Developer
+- **Location**: Pakistan (Available Worldwide for Remote Work)
 - **GitHub**: [@ahmedmahmood3839-star](https://github.com/ahmedmahmood3839-star)
 - **Email**: [ahmedmahmood3839@gmail.com](mailto:ahmedmahmood3839@gmail.com)
 - **YouTube**: [@AhmadMehmood-d6j](https://www.youtube.com/@AhmadMehmood-d6j)
@@ -21,21 +25,40 @@ Built with **Next.js**, **React**, **Tailwind CSS**, and **Framer Motion**.
 
 ---
 
-## 🛠️ Tech Stack
+## 🚀 Featured Engineering Projects
 
-- **Frontend**: React, Next.js, HTML5, CSS3, JavaScript, TypeScript, Tailwind CSS, Framer Motion
-- **Mobile**: React Native
-- **Backend & APIs**: Node.js, Express.js, RESTful APIs
-- **Databases & Services**: MongoDB, Firebase
-- **Tooling**: Git, GitHub, VS Code, npm
+### 1. Namaz Reminder — Pakistan
+* **Overview**: Offline-first Islamic prayer companion and real-time Qibla compass tailored for Pakistani cities and Hanafi jurisprudence.
+* **Stack**: React Native, Expo SDK 57, TypeScript, Adhan calculation engine, AsyncStorage, Magnetometer Sensor, Local Notifications.
+* **Highlights**: 100% offline astronomical prayer calculation (University of Islamic Sciences, Karachi method), 7-day rolling notification scheduler, live sensor compass with Kaaba bearing, Urdu & English bilingual interface with full RTL layout, Qaza tracker, Adhkar, and Qur'an reader. Standalone Android release APK packaged.
+
+### 2. VoiceCraft — AI Text-to-Speech Platform
+* **Overview**: Production-grade full-stack text-to-speech platform with multi-provider failover and cross-platform Android client packaging.
+* **Stack**: Next.js 14 (App Router), TypeScript, Prisma ORM, Supabase (PostgreSQL), ElevenLabs, Hugging Face, Capacitor 8.
+* **Highlights**: Modular provider architecture with automated timeout fallback and transactional credit safety, Google AdMob rewarded ads with Server-Side Verification (SSV) cryptographic ECDSA signature validation, full speech synthesis dashboard, and Capacitor-generated Android APK.
+
+### 3. Developer Portfolio
+* **Overview**: Modern, high-performance developer showcase highlighting verified case studies with zero placeholder demo metrics.
+* **Stack**: Next.js (Pages Router), React, Tailwind CSS, Framer Motion, tsParticles.
 
 ---
 
-## 🚀 Getting Started
+## 🛠️ Core Technology Stack
+
+- **Mobile Development**: React Native, Expo, Android native architecture, Device Sensors, Local Notifications
+- **Frontend Engineering**: Next.js, React, JavaScript, TypeScript, Tailwind CSS, Framer Motion
+- **Backend & APIs**: Node.js, Express.js, RESTful API architecture, Prisma ORM
+- **Cloud & Databases**: Supabase, PostgreSQL, Firebase, MongoDB, Local Storage / AsyncStorage
+- **Version Control & Tools**: Git, GitHub, VS Code, npm, Postman
+
+---
+
+## 💻 Getting Started Locally
 
 ### Prerequisites
-
-Ensure you have **Node.js** (v18 or higher) and **Git** installed on your system.
+- **Node.js** (v18.0.0 or higher recommended)
+- **npm** or compatible package manager
+- **Git**
 
 ### Installation
 
@@ -50,71 +73,61 @@ Ensure you have **Node.js** (v18 or higher) and **Git** installed on your system
    npm install
    ```
 
-3. Run the development server:
+3. Start the local development server:
    ```bash
    npm run dev
    ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+4. Navigate to [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
-## 🏗️ Building & Deployment
+## 🏗️ Production Build & Quality Verification
 
-### Production Build
+To verify code quality and build the optimized production bundle:
 
-To generate the optimized production build:
 ```bash
+# Run ESLint validation
+npm run lint
+
+# Generate optimized production build
 npm run build
-```
 
-To run the production server:
-```bash
+# Start production server
 npm start
 ```
 
-### Deployment
-
-This Next.js application is ready for instant deployment on **Vercel** or **Netlify**:
-- **Vercel**: Import the GitHub repository on Vercel and it will automatically detect Next.js settings.
-- **Netlify**: Configured with `netlify.toml` and static form handler `public/__forms.html`.
-
 ---
 
-## 📁 Project Structure
+## 📁 Repository Structure
 
 ```bash
-ahmad-mehmood-portfolio/
+portfolio/
   |- components/           # Reusable UI components & sliders
-  |  |- Avatar.jsx
-  |  |- Bulb.jsx
-  |  |- Circles.jsx
-  |  |- Header.jsx         # Header & logo navigation
+  |  |- Avatar.jsx         # Developer branding badge
+  |  |- Header.jsx         # Top header & social links
   |  |- Layout.jsx         # Page wrapper, fonts & SEO metadata
   |  |- Nav.jsx            # Floating navigation bar
-  |  |- ParticlesContainer.jsx # Dynamic interactive particles
-  |  |- ProjectsBtn.jsx    # Animated project link button
-  |  |- ServiceSlider.jsx  # Services Swiper slider
-  |  |- Socials.jsx        # Social links
-  |  |- TestimonialSlider.jsx # Development approach slider
-  |  |- TopLeftImg.jsx
-  |  |- Transition.jsx     # Route transition animations
-  |  |- WorkSlider.jsx     # Featured projects slider
+  |  |- ParticlesContainer.jsx # Canvas interactive particles
+  |  |- ServiceSlider.jsx  # Technical services slider
+  |  |- Socials.jsx        # Verified social link icons
+  |  |- TestimonialSlider.jsx # 5-step engineering approach slider
+  |  |- WorkSlider.jsx     # Featured real-project case studies
   |- pages/                # Next.js Pages router
-  |  |- _app.jsx           # App wrapper with Framer Motion transitions
+  |  |- api/
+  |  |  |- contact.js      # Contact inquiry handler
   |  |- index.jsx          # Hero / Home section
-  |  |- about/             # About & tech stack section
-  |  |- services/          # Services section
-  |  |- work/              # Portfolio showcase section
-  |  |- testimonials/      # Development workflow section
-  |  |- contact/           # Contact form section
-  |- public/               # Static assets & icons
-  |- styles/               # Tailwind & global CSS
-  |- netlify.toml          # Netlify configuration
+  |  |- about/             # Engineering competencies & background
+  |  |- approach/          # 5-step development lifecycle
+  |  |- services/          # Services offered
+  |  |- work/              # Project case studies
+  |  |- contact/           # Contact & direct email section
+  |- public/               # Static assets & SVG project visuals
+  |  |- projects/          # High-fidelity project case study visuals
+  |- styles/               # Tailwind & global stylesheet
   |- next.config.js        # Next.js configuration
   |- package.json
   |- tailwind.config.js
-  |- variants.js           # Framer motion animation variants
 ```
 
 ---
@@ -122,8 +135,8 @@ ahmad-mehmood-portfolio/
 ## 📜 License & Attribution
 
 This project is licensed under the [MIT License](LICENSE).
-Base visual design and layout inspired by the open-source modern portfolio template by Sanidhya Kumar Verma.
-Personalized, maintained, and curated by **Ahmad Mehmood**.
+- Base layout concept inspired by the open-source portfolio template by Sanidhya Kumar Verma.
+- Customizations, real project case studies, API handlers, engineering pillars, and ongoing maintenance by **Ahmad Mehmood**.
 
 ---
 
