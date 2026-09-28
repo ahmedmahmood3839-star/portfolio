@@ -46,6 +46,23 @@ export const projectsData = [
     apkStatus: "Standalone APK Packaged",
   },
   {
+    title: "BetRupees Guide",
+    tagline: "Independent Platform Guide & SEO Landing Page",
+    role: "Frontend Developer",
+    category: "Web Development • SEO • Landing Page",
+    image: "/projects/referral-guide.png",
+    tech: ["Next.js", "React", "Tailwind CSS", "TypeScript", "Vercel"],
+    features: [
+      "Responsive mobile-first landing experience with intuitive navigation",
+      "SEO metadata and search-engine crawl configuration",
+      "Semantic HTML structure and optimized interactive components",
+    ],
+    repoStatus: "Private Repository",
+    repoLink: null,
+    apkStatus: null,
+    liveLink: "https://br-guide.devs.surf/",
+  },
+  {
     title: "Personal Developer Portfolio",
     tagline: "Modern High-Performance Developer Showcase",
     role: "Full-Stack Developer",
@@ -151,6 +168,18 @@ const WorkSlider = () => {
 
                 {/* Bottom Action Row */}
                 <div className="pt-3 border-t border-white/10 flex flex-wrap items-center gap-3">
+                  {project.liveLink && (
+                    <Link
+                      href={project.liveLink}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="inline-flex items-center gap-x-2 text-xs font-semibold bg-emerald-500 text-white px-4 py-2 rounded-full hover:bg-emerald-400 transition-all duration-300 shadow-lg shadow-emerald-500/20"
+                      aria-label={`View live project for ${project.title}`}
+                    >
+                      <span>View Live</span>
+                      <BsArrowRight className="text-sm" />
+                    </Link>
+                  )}
                   {project.repoLink ? (
                     <Link
                       href={project.repoLink}
