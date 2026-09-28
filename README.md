@@ -37,7 +37,12 @@ Personal developer portfolio of **Ahmad Mehmood**, showcasing verified full-stac
 * **Stack**: Next.js 14 (App Router), TypeScript, Prisma ORM, Supabase (PostgreSQL), ElevenLabs, Hugging Face, Capacitor 8.
 * **Highlights**: Modular provider architecture with automated timeout fallback and transactional credit safety, Google AdMob rewarded ads with Server-Side Verification (SSV) cryptographic ECDSA signature validation, full speech synthesis dashboard, and Capacitor-generated Android APK.
 
-### 3. Developer Portfolio
+### 3. BetRupees Guide — SEO Landing Page
+* **Overview**: Responsive referral-focused landing page optimized for search engine discoverability and clear conversion paths.
+* **Stack**: Next.js, React, Tailwind CSS, TypeScript, Vercel.
+* **Highlights**: Mobile-first UI, semantic HTML structure, comprehensive SEO metadata configuration, and custom subdomain deployment.
+
+### 4. Developer Portfolio
 * **Overview**: Modern, high-performance developer showcase highlighting verified case studies with zero placeholder demo metrics.
 * **Stack**: Next.js (Pages Router), React, Tailwind CSS, Framer Motion, tsParticles.
 
