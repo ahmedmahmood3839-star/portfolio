@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {
   RxDesktop,
   RxMobile,
@@ -13,6 +14,7 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 
 export const serviceData = [
+  { Icon: RxDesktop, title: "Website Fixes & Maintenance", description: "Fix broken layouts, forms and frontend bugs in React and Next.js websites. Share your website link and the problem for a scoped quote." },
   {
     Icon: RxLayers,
     title: "Full-Stack Web Development",
@@ -61,11 +63,11 @@ const ServiceSlider = () => {
       }}
       modules={[FreeMode, Pagination]}
       freeMode
-      className="h-[260px] sm:h-[350px]"
+      className="h-[390px] pb-10"
     >
       {serviceData.map((item, i) => (
         <SwiperSlide key={i}>
-          <div className="bg-[rgba(65,47,123,0.15)] h-full min-h-[220px] sm:min-h-[290px] rounded-lg px-6 py-6 sm:py-8 flex flex-col justify-between group cursor-pointer hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300">
+          <Link href="/contact" aria-label={`Discuss ${item.title}`} className="bg-[rgba(65,47,123,0.15)] h-full min-h-[220px] sm:min-h-[290px] rounded-lg px-6 py-6 sm:py-8 flex flex-col justify-between group cursor-pointer hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300">
             {/* top: icon & title */}
             <div>
               {/* icon */}
@@ -91,7 +93,7 @@ const ServiceSlider = () => {
                 aria-hidden
               />
             </div>
-          </div>
+          </Link>
         </SwiperSlide>
       ))}
     </Swiper>
