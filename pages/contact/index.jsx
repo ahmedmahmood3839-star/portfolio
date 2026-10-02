@@ -89,7 +89,7 @@ const Contact = () => {
               Let&apos;s <span className="text-accent">connect.</span>
             </h2>
             <p className="text-white/70 text-xs sm:text-sm md:text-base max-w-lg mx-auto leading-relaxed">
-              Have a mobile app, web application, or technical project in mind? Reach out directly or send a message below.
+              Tell me what you need to build, your preferred timeline, and your budget range. I will reply by email to discuss the scope and next steps.
             </p>
 
             {/* Quick Contact Badges */}
@@ -100,6 +100,9 @@ const Contact = () => {
               >
                 <HiEnvelope className="text-sm text-accent" />
                 <span>ahmedmahmood3839@gmail.com</span>
+              </a>
+              <a href="tel:+923056593023" className="inline-flex items-center bg-white/10 hover:bg-white/20 text-white text-xs font-medium px-4 py-1.5 rounded-full border border-white/15 transition-all duration-300">
+                +92 305 6593023
               </a>
               <a
                 href="https://github.com/ahmedmahmood3839-star"
@@ -211,7 +214,7 @@ const Contact = () => {
               name="message"
               value={formData.message}
               onChange={handleChange}
-              placeholder="Describe your project, timeline, or inquiry..."
+              placeholder="What should we build? Include the main features, timeline, and budget range if known."
               className="textarea h-36"
               disabled={status === "loading"}
               required
@@ -225,7 +228,7 @@ const Contact = () => {
               disabled={status === "loading"}
             >
               <span className="font-semibold text-xs sm:text-sm text-white whitespace-nowrap">
-                {status === "loading" ? "Validating..." : "Prepare & Send Email"}
+                {status === "loading" ? "Preparing..." : "Prepare Project Email"}
               </span>
               <BsArrowRight className="ml-2 text-sm transition-transform duration-300 group-hover:translate-x-1" />
             </button>

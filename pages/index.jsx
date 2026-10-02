@@ -22,7 +22,7 @@ const Home = () => {
             className="mb-3"
           >
             <span className="inline-block bg-accent/15 border border-accent/30 text-accent text-xs font-semibold uppercase tracking-widest px-3.5 py-1 rounded-full">
-              Full-Stack &amp; Mobile Developer
+              Inspire Digital Studio
             </span>
           </motion.div>
 
@@ -45,9 +45,9 @@ const Home = () => {
             exit="hidden"
             className="max-w-md xl:max-w-xl mx-auto xl:mx-0 mb-8 text-sm md:text-base text-white/80 leading-relaxed font-light"
           >
-            Building modern web platforms, mobile applications, and practical
-            AI-powered experiences. Specializing in offline-first React Native
-            architectures, full-stack Next.js systems, and clean, reliable code.
+            I build business websites, web applications, and mobile apps through
+            Inspire Digital Studio. From your first idea to a working product,
+            I focus on clear communication, practical features, and reliable code.
           </motion.p>
 
           {/* clear call-to-actions */}
@@ -84,7 +84,7 @@ const Home = () => {
               className="inline-flex items-center gap-x-2 bg-white/5 hover:bg-white/15 text-white/90 hover:text-white font-medium text-xs sm:text-sm px-5 py-3 rounded-full border border-white/10 transition-all duration-300"
             >
               <HiEnvelope className="text-base text-accent" />
-              <span>Contact</span>
+              <span>Discuss Your Project</span>
             </Link>
           </motion.div>
         </div>
@@ -109,7 +109,7 @@ const Home = () => {
           animate="show"
           exit="hidden"
           transition={{ duration: 1, ease: "easeInOut" }}
-          className="w-full h-full max-w-[737px] max-h-[678px] absolute -bottom-32 lg:bottom-0 lg:right-[8%]"
+          className="hidden 2xl:block w-full h-full max-w-[737px] max-h-[678px] absolute -bottom-32 lg:bottom-0 lg:right-[8%]"
         >
           <Avatar />
         </motion.div>

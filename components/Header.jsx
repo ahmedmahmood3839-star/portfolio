@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 import Socials from "../components/Socials";
@@ -10,13 +9,8 @@ const Header = () => {
         <div className="flex flex-col lg:flex-row justify-between items-center gap-y-6 py-8">
           {/* logo */}
           <Link href="/">
-            <Image
-              src="/logo.svg"
-              alt="Ahmad Mehmood"
-              width={240}
-              height={38}
-              priority
-            />
+            <span className="block text-lg font-semibold tracking-tight text-white">Inspire <span className="text-accent">Digital Studio</span></span>
+            <span className="block text-xs text-white/60 mt-1">Websites &amp; mobile apps by Ahmad Mehmood</span>
           </Link>
 
           {/* socials */}

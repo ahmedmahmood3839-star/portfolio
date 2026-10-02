@@ -19,10 +19,10 @@ const Layout = ({ children }) => {
     >
       {/* metadata */}
       <Head>
-        <title>Ahmad Mehmood | Full-Stack &amp; Mobile Developer</title>
+        <title>Inspire Digital Studio | Ahmad Mehmood</title>
         <meta
           name="description"
-          content="Portfolio of Ahmad Mehmood, a Full-Stack and Mobile Developer building modern web applications, React Native experiences and AI-powered tools."
+          content="Websites, web applications, and mobile app development by Ahmad Mehmood at Inspire Digital Studio. View projects and discuss your next build."
         />
         <meta name="author" content="Ahmad Mehmood" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
@@ -30,20 +30,20 @@ const Layout = ({ children }) => {
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Ahmad Mehmood | Full-Stack &amp; Mobile Developer" />
+        <meta property="og:title" content="Inspire Digital Studio | Ahmad Mehmood" />
         <meta
           property="og:description"
-          content="Portfolio of Ahmad Mehmood, a Full-Stack and Mobile Developer building modern web applications, React Native experiences and AI-powered tools."
+          content="Websites, web applications, and mobile app development by Ahmad Mehmood at Inspire Digital Studio. View projects and discuss your next build."
         />
-        <meta property="og:url" content="https://github.com/ahmedmahmood3839-star" />
-        <meta property="og:site_name" content="Ahmad Mehmood Portfolio" />
+        <meta property="og:url" content="https://modern-portfolio-main-tau.vercel.app/" />
+        <meta property="og:site_name" content="Inspire Digital Studio" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Ahmad Mehmood | Full-Stack &amp; Mobile Developer" />
+        <meta name="twitter:title" content="Inspire Digital Studio | Ahmad Mehmood" />
         <meta
           name="twitter:description"
-          content="Portfolio of Ahmad Mehmood, a Full-Stack and Mobile Developer building modern web applications, React Native experiences and AI-powered tools."
+          content="Websites, web applications, and mobile app development by Ahmad Mehmood at Inspire Digital Studio. View projects and discuss your next build."
         />
 
         <link rel="icon" href="/favicon.ico" />

@@ -1,6 +1,6 @@
 <a name="readme-top"></a>
 
-# Ahmad Mehmood — Full-Stack & Mobile Developer Portfolio
+# Inspire Digital Studio — Ahmad Mehmood
 
 [![Next.js](https://img.shields.io/badge/Next.js-16.3.2-black?style=flat&logo=next.js)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-18.2.0-blue?style=flat&logo=react)](https://react.dev/)
@@ -8,9 +8,15 @@
 [![Framer Motion](https://img.shields.io/badge/Framer_Motion-10.12-ff69b4?style=flat&logo=framer)](https://www.framer.com/motion/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-Personal developer portfolio of **Ahmad Mehmood**, showcasing verified full-stack web and cross-platform mobile engineering projects with clean architecture, offline-first reliability, and thoughtful UI/UX.
+Website and mobile app development portfolio of **Ahmad Mehmood**, working as **Inspire Digital Studio**, showcasing verified full-stack web and cross-platform mobile engineering projects with clean architecture, offline-first reliability, and thoughtful UI/UX.
 
 ---
+
+## Work with me
+
+I build business websites, web applications, and mobile apps for remote clients. Share your goals, main features, budget range, and timeline by [email](mailto:ahmedmahmood3839@gmail.com).
+
+[View the live portfolio](https://modern-portfolio-main-tau.vercel.app/)
 
 ## 👨‍💻 About Ahmad Mehmood
 
