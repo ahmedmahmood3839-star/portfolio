@@ -38,7 +38,7 @@ const Contact = () => {
       if (response.ok && data.success) {
         setStatus("success");
         setFeedbackMsg(
-          "Inquiry validated. Please click below to send directly via your email client to ahmedmahmood3839@gmail.com."
+          "Your email draft is ready. Open it below and press Send in your email app."
         );
         if (data.mailtoFallback) {
           setMailtoUrl(data.mailtoFallback);
@@ -101,6 +101,7 @@ const Contact = () => {
                 <HiEnvelope className="text-sm text-accent" />
                 <span>ahmedmahmood3839@gmail.com</span>
               </a>
+              <a href="https://wa.me/923056593023" target="_blank" rel="noreferrer noopener" className="inline-flex items-center bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-medium px-4 py-1.5 rounded-full transition-colors">Chat on WhatsApp</a>
               <a href="tel:+923056593023" className="inline-flex items-center bg-white/10 hover:bg-white/20 text-white text-xs font-medium px-4 py-1.5 rounded-full border border-white/15 transition-all duration-300">
                 +92 305 6593023
               </a>
@@ -132,7 +133,7 @@ const Contact = () => {
                   href={mailtoUrl}
                   className="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-xs px-3.5 py-1.5 rounded-lg whitespace-nowrap transition-colors"
                 >
-                  Open in Mail Client
+                  Open Email Draft
                 </a>
               )}
             </motion.div>
@@ -168,7 +169,7 @@ const Contact = () => {
             className="flex-1 flex flex-col gap-4 sm:gap-6 w-full mx-auto"
             onSubmit={handleSubmit}
             autoComplete="off"
-            noValidate
+
           >
             {/* input group: name & email */}
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full">
